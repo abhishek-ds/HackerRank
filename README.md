@@ -1,1 +1,1 @@
-All My HackerRank Puzzles Solved.
+Solutions to HackerRank Puzzles
