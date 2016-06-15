@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Configuration; 
+using System.Linq;
+
+class Solution {
+    static void Main() {
+        int n = Convert.ToInt32(Console.ReadLine());
+        Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+        int j=0;
+        for(int i=0; i<n; i++)
+            {
+              string[] sArray = Console.ReadLine().Split(' ');            
+             string _key = sArray[0];
+             string _values = sArray[1];
+             phoneBook.Add(_key,_values);
+        }         
+         while(j < n)
+             {
+             string input = Console.ReadLine();
+             if(phoneBook.ContainsKey(input))
+                 {
+                     Console.WriteLine(input + "=" + phoneBook[input]);
+             }
+             else
+                 {
+                 Console.WriteLine("Not found");
+             }
+             j++;
+         }         
+    }
+}
