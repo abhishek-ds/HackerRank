@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+
+    static void Main(String[] args) {
+        int t = Convert.ToInt32(Console.ReadLine());        
+        for(int a0 = 0; a0 < t; a0++){
+            int n = Convert.ToInt32(Console.ReadLine());
+            int looper = n;
+            int loopCounter = n;
+            int count=0;
+            int length = 1; 
+            int i=0;
+            while(loopCounter != 0)
+           {
+                length++;
+                loopCounter = loopCounter / 10;             
+           }
+            
+            int[] numArray = new int[length];
+            while(length !=0)
+            {               
+                numArray[i] = looper % 10;                   
+                if(numArray[i] != 0)
+                {
+                  if((n % numArray[i])==0)
+                   {
+                     count++;
+                   }
+                }  
+                looper= looper/10;
+                --length;
+                ++i;
+            }    
+            Console.WriteLine(""+count);
+        }
+    }
+}
