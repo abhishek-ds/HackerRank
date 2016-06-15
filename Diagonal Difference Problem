@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+
+    static void Main(String[] args) {
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[][] a = new int[n][];
+        var sum1=0;
+        var sum2=0;
+        for(int a_i = 0; a_i < n; a_i++){
+           string[] a_temp = Console.ReadLine().Split(' ');
+           a[a_i] = Array.ConvertAll(a_temp,Int32.Parse);
+           sum1+=a[a_i][a_i];
+           sum2+=a[a_i][n-a_i-1];
+        }
+        var Diff= Math.Abs(sum1-sum2);
+        Console.WriteLine(Diff);
+    }
+}
