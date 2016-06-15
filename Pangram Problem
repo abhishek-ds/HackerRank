@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+        var input = Console.ReadLine();
+            char[] charArray =
+            {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+            int count = 0;
+            for (var i = 0; i < charArray.Length; i++)
+            {
+                if (input.ToLower().Contains(charArray[i].ToString()))
+                {
+                    count++;
+                }
+            }
+            if (count == 26)
+            {
+                Console.WriteLine("pangram");
+            }
+            else
+            {
+                Console.WriteLine("not pangram");
+            }
+    }
+}
