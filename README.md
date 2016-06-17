@@ -1,3 +1,3 @@
-Solutions to HackerRank Puzzles
+Solutions to HackerRank Problems
 
 Language : C# (.Net)
